@@ -50,23 +50,6 @@
      */
     function injectFontsStylesheet() {
 
-        // woff 지원 검사
-        var supportsWoff = (function( win ){
-            if( !( "FontFace" in win ) ) {
-                return false;
-            }
-
-            var f = new FontFace('t', 'url( "data:application/font-woff;base64,d09GRgABAAAAAAHgAAoAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAAA9AAAABgAAABOBKQEQWNtYXAAAAEMAAAAJgAAACwADABzZ2x5ZgAAATQAAAAUAAAAFAgBOQJoZWFkAAABSAAAAC8AAAA2Dkdn0mhoZWEAAAF4AAAAFQAAACQIAQQDaG10eAAAAZAAAAAIAAAACAQAAABsb2NhAAABmAAAAAYAAAAGAAoAAG1heHAAAAGgAAAAEwAAACAABAACbmFtZQAAAbQAAAAeAAAAIAAjCF5wb3N0AAAB1AAAAAwAAAAgAAMAAHjaY2AAghQGRgZygQODAwuYASIBI1EA7njaY2BgYGRgBmIGBh4GFgYFIM0ChCC+w///EPL/QTCfAQBNfgZ8AAAAAQAAAAAEAAQAAAEAADEBBAAEAHjaY2BkYGAA4nBby/fx/DZfOZhYGEDgQlr1axB96fSyTyCahQEizsAEIgAb7wlHAHjaY2BkYGBhAAE4yciACpgAAZIAEQAAAAAAAAAEAAAAAAAAAAAKAAB42mNgZGBgYAJCEI0FAAAAvgAHAHjaY2BgYGKQY2BmYGThZGAEshmgbCYw2wEABjMAigAAeNpjYGbACwAAfQAE" ) format( "woff" )', {});
-            f.load()['catch'](function() {});
-
-            return f.status == 'loading' || f.status == 'loaded';
-        })( window );
-
-        // woff 지원도 안 한다면 웹폰트를 사용하지 않는다.
-        if (!supportsWoff) {
-            return false;
-        }
-
         var supportsWoff2 = (function( win ){
             if( !( "FontFace" in win ) ) {
                 return false;
@@ -78,6 +61,7 @@
             return f.status == 'loading' || f.status == 'loaded';
         })( window );
 
+        // woff 지원 여부는 체크하지 않는다. 안드로이드 4.4 미만, IE9 미만은 woff를 지원하지 않는데, 워낙 소수라 일단 디텍트 코드를 넣지 않았다.
         var fontPath = woffPath;
         if (supportsWoff2) {
             fontPath = woff2Path;
