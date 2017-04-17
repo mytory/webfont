@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 웹폰트 테스트
+title: 즉시 사용 가능한 웹폰트 기법
 email: mail@mytory.net
 description: > # this means to ignore newlines until "baseurl:"
-  웹폰트 테스트 사이트
+  대역폭이나 데이터 성능에 상관없이 즉시 사용 가능한 웹폰트 기법을 설명합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username: mytory
