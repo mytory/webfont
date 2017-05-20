@@ -1,8 +1,10 @@
 ---
-layout: post
+layout: page
 title:  "웹폰트 로컬스토리지 저장 기법"
 date:   2017-02-27 14:38:37 +0900
 ---
+
+관련해 상세한 내용은 [웹 폰트를 로컬 스토리지에 저장하는 기법 - 캐시 안정성 증가, 글꼴 깜빡임 현상 제거](https://mytory.net/2016/06/15/webfont-best-practice.html)를 참고하세요.
 
 ## Code
 
