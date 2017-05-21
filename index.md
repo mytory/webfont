@@ -7,9 +7,9 @@ title: Mytory Webfont
 
 ## 바로 사용하기 
 
-이 사이트는 기본적으로 MytoryWebfont라는 js 라이브러리를 제공합니다. 시간이 부족한 분은 그냥 이 웹폰트 라이브러리를 다운받아서 사용하시면 됩니다.
+이 사이트는 기본적으로 MytoryWebfont.js라는 라이브러리를 제공합니다. 시간이 부족한 분은 그냥 이 웹폰트 라이브러리를 다운받아서 사용하시면 됩니다.
 
-**[▶ MytoryWebfont 라이브러리 페이지 가기](downloads.html)**
+**[▶ MytoryWebfont.js](downloads.html)**
 
 웹폰트 자체에 대해 좀더 탐구하고 싶은 분들에게 정보를 제공하는 것도 이 사이트의 중요한 목적입니다. 그런 분들은 아래 글들을 차분히 읽어 보세요.
 

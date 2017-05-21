@@ -1,9 +1,11 @@
 ---
 layout: page
-title: MytoryWebfont 라이브러리 
+title: MytoryWebfont.js
 ---
 
 아래 자원을 다운로드한 뒤 페이지에 js 코드를 넣으면 됩니다. 상용 한글 2,350자+&alpha;를 넣은 글꼴입니다. 변형을 가해 재배포하는 것을 허용하는 글꼴만 서비스함을 알려 드립니다. 
+
+(제작중)
 
 - 나눔고딕
 - 나눔바른고딕
