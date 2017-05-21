@@ -1,7 +1,6 @@
 ---
-layout: post
+layout: page
 title:  "ttf, woff, woff2 지원 여부 검사"
-date:   2017-02-27 14:38:37 +0900
 ---
 
 <div id="font-type-list">

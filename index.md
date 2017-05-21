@@ -11,7 +11,7 @@ title: Mytory Webfont
 
 **[▶ MytoryWebfont 라이브러리 페이지 가기](downloads.html)**
 
-좀더 탐구하고 싶은 분들은 아래 글들을 차분히 읽어 보세요.
+웹폰트 자체에 대해 좀더 탐구하고 싶은 분들에게 정보를 제공하는 것도 이 사이트의 중요한 목적입니다. 그런 분들은 아래 글들을 차분히 읽어 보세요.
 
 ----
 
@@ -52,4 +52,6 @@ title: Mytory Webfont
 - Chrome for Android, Firefox for Android, IE Mobile, Uc Browser for Android, Samsung Internet, QQ Browser 기본 지원
 
 caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼센트가 woff를 지원합니다. 현재 상황을 보고 싶다면 <http://caniuse.com/#feat=woff>를 방문하세요.
+
+[▶ 지금 사용하는 브라우저가 지원하는 폰트 포맷 확인하기](does-support-what-font-format.html)
 
