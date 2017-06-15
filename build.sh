@@ -20,14 +20,6 @@ fi
 DIRNAME=$(dirname "$0")
 cd $DIRNAME
 
-# otf to ttf
-# for font in fonts/original-fonts/*.otf
-# 	do 
-# 	filename=$(basename -s .otf "$font")
-# 	glyphIgo.py convert -f "$font" -o fonts/original-fonts/"$filename".ttf
-# 	echo fonts/original-fonts/"$filename".otf converted to "$filename".otf.
-# done
-
 # ttf
 for font in fonts/original-fonts/*.ttf
 	do 
@@ -58,3 +50,5 @@ for font in fonts/*.ttf
 	    	woff2_compress "$font"
 		fi
 done
+
+./build-css.sh
