@@ -21,7 +21,7 @@ DIRNAME=$(dirname "$0")
 cd $DIRNAME
 
 # ttf
-for font in fonts/original-fonts/*.ttf
+for font in fonts/original-fonts/*.{ttf,otf}
 	do 
 		subset_name=$(basename -s .ttf "$font")
 		if [ ! -f fonts/"$subset_name".subset.ttf ]; then
@@ -29,9 +29,10 @@ for font in fonts/original-fonts/*.ttf
 		    glyphIgo.py subset -p glyph-list.txt -f "$font" -o fonts/"$subset_name".subset.ttf
 		    echo fonts/"$subset_name".subset.ttf created.
 		fi
+}
 done
 
-# ttf to woff
+# subset to woff
 for font in fonts/*.ttf
     do
     	name=$(basename -s .ttf "$font")
@@ -41,7 +42,7 @@ for font in fonts/*.ttf
 		fi
 done
 
-# ttf to woff2
+# subset to woff2
 for font in fonts/*.ttf
     do
     	name=$(basename -s .ttf "$font")
