@@ -29,7 +29,6 @@ for font in fonts/original-fonts/*.{ttf,otf}
 		    glyphIgo.py subset -p glyph-list.txt -f "$font" -o fonts/"$subset_name".subset.ttf
 		    echo fonts/"$subset_name".subset.ttf created.
 		fi
-}
 done
 
 # subset to woff
