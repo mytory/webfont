@@ -51,4 +51,10 @@ for font in fonts/*.ttf
 		fi
 done
 
-# ./build-css.sh
+for font in fonts/*.(ttf|eot|woff|woff2) 
+	do base64 -w0 "$font" > $font.base64
+done
+
+php build-css.php
+
+php build-example.php
