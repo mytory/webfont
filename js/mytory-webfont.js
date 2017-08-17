@@ -1,9 +1,9 @@
-function mytoryWebfont(options) {
+function mytoryWebfont(options, callback) {
     "use strict";
 
     if (typeof options === 'undefined') {
         throw 'Error: options required.';
-    } 
+    }
 
     if (typeof options.woffPath === 'undefined') {
         throw 'Error: woffPath required.';
@@ -42,6 +42,12 @@ function mytoryWebfont(options) {
         || document.cookie.indexOf('fontCache') > -1
     ) {
         // 캐시된 버전을 사용한다.
+        injectFontsStylesheet();
+    } else if (document.readyState === 'complete') {
+        // 윈도우가 이미 로드된 상태라면.
+        // "loading" – the document is loading.
+        // "interactive" – the document was fully read.
+        // "complete" – the document was fully read and all resources (like images) are loaded too.
         injectFontsStylesheet();
     } else {
         // 캐시된 버전이 없으면 페이지 로딩을 막지 않고 기다렸다가
@@ -98,7 +104,7 @@ function mytoryWebfont(options) {
                 if (xhr.readyState === 4) {
                     // ajax 로 받은 css 내용을 <head>에 박는다.
                     if (options.renderingType === 'onReady') {
-                        injectRawStyle(xhr.responseText);    
+                        injectRawStyle(xhr.responseText);
                     }
                     // 그리고 css 내용을 로컬 스토리지에 집어 넣어 나중에도 쓸 수 있게 한다.
                     // 기존에 저장된 것이 있다면 덮어쓴다는 점을 알아 둬라.
@@ -124,5 +130,8 @@ function mytoryWebfont(options) {
             style.innerHTML = text;
         }
         document.getElementsByTagName('head')[0].appendChild(style);
+        if (callback) {
+            callback();
+        }
     }
 }
