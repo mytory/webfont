@@ -4,3 +4,5 @@ _site
 *~
 .jekyll-metadata
 fonts/original-fonts
+fonts/*.base64
+fonts/*.css
