@@ -59,3 +59,9 @@ new mytoryWebfont({
 ## 다운로드
 
 글꼴별 base64 css와 서브셋 웹폰트
+
+
+## 더 쓸 것
+
+복수의 글꼴 적용
+원하는 글자만 subset으로 만들기
