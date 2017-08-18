@@ -44,8 +44,8 @@ $script_template = <<<script
 script;
 
 $handle = opendir('fonts');
-$buttons = '';
-$scripts = '';
+$buttons = [];
+$scripts = [];
 while($filename = readdir($handle)) {
 	if (!preg_match('/woff$/', $filename)) {
 		continue;
@@ -67,9 +67,15 @@ while($filename = readdir($handle)) {
     }
 
     // make strings.
-	$buttons .= str_replace(['{{font_name}}', '{{font_weight}}', '{{font_label}}'], [$font_name, $font_weight, $font_label], $button_template);
-	$scripts .= str_replace(['{{font_name}}', '{{font_weight}}'], [$font_name, $font_weight], $script_template);
+	$buttons[] = str_replace(['{{font_name}}', '{{font_weight}}', '{{font_label}}'], [$font_name, $font_weight, $font_label], $button_template);
+	$scripts[] = str_replace(['{{font_name}}', '{{font_weight}}'], [$font_name, $font_weight], $script_template);
 }
+
+sort($buttons);
+sort($scripts);
+
+$buttons = implode("\n", $buttons);
+$scripts = implode("\n", $scripts);
 
 $index = file_get_contents('index.md');
 $index = preg_replace('/<!-- buttons start -->.*<!-- buttons end -->/us', "<!-- buttons start -->\n$buttons\n<!-- buttons end -->", $index);
