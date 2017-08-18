@@ -11,10 +11,18 @@ title: Mytory Webfont
 
 **[▶ MytoryWebfont.js](downloads.html)**
 
-웹폰트 자체에 대해 좀더 탐구하고 싶은 분들에게 정보를 제공하는 것도 이 사이트의 중요한 목적입니다. 그런 분들은 아래 글들을 차분히 읽어 보세요.
+웹폰트 자체에 대해 좀더 탐구하고 싶은 분들에게 정보를 제공하는 것도 이 사이트의 중요한 목적입니다. 그런 분들은 예제 아래의 글들을 차분히 읽어 보세요.
+
+
+## 예제
+
+<div class="examples">
+<!-- buttons start -->
+<button class="js-NanumSquare-Light">NanumSquare Light</button>
+<!-- buttons end -->
+</div>
 
 ----
-
 
 ## 한글 웹폰트를 사용할 만한 시대
 
@@ -55,3 +63,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 
 [▶ 지금 사용하는 브라우저가 지원하는 폰트 포맷 확인하기](does-support-what-font-format.html)
 
+<!-- script start -->
+<script>
+  document.querySelector('.js-NanumSquare-Light').addEventListener('click', function () {
+    mytoryWebfont({
+      woffPath: ['/fonts/NanumSquare-Light.woff.css'],
+      woff2Path: ['/fonts/NanumSquare-Light.woff2.css'],
+      renderingType: 'onReady' // onReady, onNextPage
+    });
+
+    var bodyEl = document.querySelector("body");
+    bodyEl.style.fontFamily = 'NanumSquareWeb';
+    bodyEl.style.fontWeight = 'Light';
+  });
+</script>
+<!-- script end -->

@@ -1,4 +1,22 @@
 <?php
+function get_font_info($filename) {
+  if (strstr($filename, '-')) {
+    $font_name = explode('-', $filename)[0];  
+  } else {
+    $font_name = explode('.', $filename)[0];  
+  }
+
+  $info = explode('.', $filename)[0]; // ex. NanumBarunGothic-Bold
+  $temp = explode('-', $info);
+  if (count($temp) == 1) {
+    $font_weight = 'Regular';
+  } else {
+    $font_weight = $temp[1];
+  }
+
+  return [$font_name, $font_weight];
+}
+
 $handle = opendir('fonts');
 $base64_files = [];
 while($font = readdir($handle)) {
@@ -47,19 +65,8 @@ $woff2_template = <<<woff2
 woff2;
 
 foreach ($base64_files as $base64_filename) {
-  if (strstr($base64_filename, '-')) {
-    $font_name = explode('-', $base64_filename)[0];  
-  } else {
-    $font_name = explode('.', $base64_filename)[0];  
-  }
 
-  $info = explode('.', $base64_filename)[0]; // ex. NanumBarunGothic-Bold
-  $temp = explode('-', $info);
-  if (count($temp) == 1) {
-    $font_weight = 'Regular';
-  } else {
-    $font_weight = $temp[1];
-  }
+  list($font_name, $font_weight) = get_font_info($base64_filename);
   
   if (strstr($base64_filename, 'eot')) {
     $template = $eot_template;
