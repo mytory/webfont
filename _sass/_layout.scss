@@ -240,3 +240,20 @@
         }
     }
 }
+
+.examples {
+    button {
+        transition: all 1s;
+        width: 300px;
+        line-height: 2em;
+        background-color: white;
+        border: 1px solid #eee;
+        font-family: inherit;
+        margin-bottom: .5em;
+
+        &:hover {
+            background-color: #eee;
+            border: 1px solid #ddd;
+        }
+    }
+}
