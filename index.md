@@ -18,21 +18,21 @@ title: Mytory Webfont
 
 <div class="examples">
 <!-- buttons start -->
-<button type="button" class="js-IropkeBatang-Regular">IropkeBatangMSubset.ttf</button>
+<button type="button" class="js-IropkeBatang-Normal">IropkeBatangMSubset.ttf</button>
 
 <button type="button" class="js-NanumBarunGothic-Bold">나눔바른고딕 Bold</button>
 
 <button type="button" class="js-NanumBarunGothic-Light">나눔바른고딕 Light</button>
 
-<button type="button" class="js-NanumBarunGothic-Regular">나눔바른고딕</button>
+<button type="button" class="js-NanumBarunGothic-Normal">나눔바른고딕</button>
 
 <button type="button" class="js-NanumBarunGothic-UltraLight">나눔바른고딕 UltraLight</button>
 
 <button type="button" class="js-NanumBarunpen-Bold">나눔바른펜 Bold</button>
 
-<button type="button" class="js-NanumBarunpen-Regular">나눔바른펜</button>
+<button type="button" class="js-NanumBarunpen-Normal">나눔바른펜</button>
 
-<button type="button" class="js-NanumBrush-Regular">나눔손글씨 붓</button>
+<button type="button" class="js-NanumBrush-Normal">나눔손글씨 붓</button>
 
 <button type="button" class="js-NanumGothic-Bold">나눔고딕 Bold</button>
 
@@ -40,19 +40,19 @@ title: Mytory Webfont
 
 <button type="button" class="js-NanumGothic-Light">나눔고딕 Light</button>
 
-<button type="button" class="js-NanumGothic-Regular">나눔고딕</button>
+<button type="button" class="js-NanumGothic-Normal">나눔고딕</button>
 
 <button type="button" class="js-NanumGothic_Coding-Bold">나눔고딕코딩-Bold</button>
 
-<button type="button" class="js-NanumGothic_Coding-Regular">나눔고딕코딩</button>
+<button type="button" class="js-NanumGothic_Coding-Normal">나눔고딕코딩</button>
 
 <button type="button" class="js-NanumMyeongjo-Bold">나눔명조 Bold</button>
 
 <button type="button" class="js-NanumMyeongjo-ExtraBold">나눔명조 ExtraBold</button>
 
-<button type="button" class="js-NanumMyeongjo-Regular">나눔명조</button>
+<button type="button" class="js-NanumMyeongjo-Normal">나눔명조</button>
 
-<button type="button" class="js-NanumPen-Regular">나눔손글씨 펜</button>
+<button type="button" class="js-NanumPen-Normal">나눔손글씨 펜</button>
 
 <button type="button" class="js-NanumSquare-Bold">나눔스퀘어 Bold</button>
 
@@ -60,15 +60,13 @@ title: Mytory Webfont
 
 <button type="button" class="js-NanumSquare-Light">나눔스퀘어 Light</button>
 
-<button type="button" class="js-NanumSquare-Regular">나눔스퀘어 Regular</button>
+<button type="button" class="js-NanumSquare-Normal">나눔스퀘어 Regular</button>
 
 <button type="button" class="js-NotoSansCJKkr-Light">Noto Sans CJK KR Light</button>
 
-<button type="button" class="js-NotoSansCJKkr-Regular">Noto Sans CJK KR Regular</button>
+<button type="button" class="js-NotoSansCJKkr-Normal">Noto Sans CJK KR Regular</button>
 
-<button type="button" class="js-NotoSansKR-Regular">NotoSansKR Regular</button>
-
-<button type="button" class="js-NotoSerifCJKkr-Regular">Noto Serif CJK KR</button>
+<button type="button" class="js-NotoSerifCJKkr-Normal">Noto Serif CJK KR</button>
 
 <!-- buttons end -->
 </div>
@@ -116,18 +114,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 
 <!-- scripts start -->
 <script>
-  document.querySelector('.js-IropkeBatang-Regular').addEventListener('click', function () {
+  document.querySelector('.js-IropkeBatang-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/IropkeBatang-Regular.woff.css'],
-      woff2Path: ['/fonts/IropkeBatang-Regular.woff2.css'],
+      woffPath: ['/fonts/IropkeBatang-Normal.woff.css'],
+      woff2Path: ['/fonts/IropkeBatang-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'IropkeBatangWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -170,18 +168,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumBarunGothic-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumBarunGothic-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumBarunGothic-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumBarunGothic-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumBarunGothic-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumBarunGothic-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumBarunGothicWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -224,36 +222,36 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumBarunpen-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumBarunpen-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumBarunpen-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumBarunpen-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumBarunpen-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumBarunpen-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumBarunpenWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
 </script>
 
 <script>
-  document.querySelector('.js-NanumBrush-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumBrush-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumBrush-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumBrush-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumBrush-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumBrush-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumBrushWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -314,18 +312,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumGothic-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumGothic-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumGothic-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumGothic-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumGothic-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumGothic-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumGothicWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -350,18 +348,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumGothic_Coding-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumGothic_Coding-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumGothic_Coding-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumGothic_Coding-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumGothic_Coding-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumGothic_Coding-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumGothic_CodingWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -404,36 +402,36 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumMyeongjo-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumMyeongjo-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumMyeongjo-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumMyeongjo-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumMyeongjo-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumMyeongjo-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumMyeongjoWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
 </script>
 
 <script>
-  document.querySelector('.js-NanumPen-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumPen-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumPen-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumPen-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumPen-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumPen-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumPenWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -494,18 +492,18 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NanumSquare-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NanumSquare-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NanumSquare-Regular.woff.css'],
-      woff2Path: ['/fonts/NanumSquare-Regular.woff2.css'],
+      woffPath: ['/fonts/NanumSquare-Normal.woff.css'],
+      woff2Path: ['/fonts/NanumSquare-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NanumSquareWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
@@ -530,54 +528,36 @@ caniuse.com을 보면 2017년 4월 17일 현재 사용 브라우저의 94.18퍼�
 </script>
 
 <script>
-  document.querySelector('.js-NotoSansCJKkr-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NotoSansCJKkr-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NotoSansCJKkr-Regular.woff.css'],
-      woff2Path: ['/fonts/NotoSansCJKkr-Regular.woff2.css'],
+      woffPath: ['/fonts/NotoSansCJKkr-Normal.woff.css'],
+      woff2Path: ['/fonts/NotoSansCJKkr-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NotoSansCJKkrWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
 </script>
 
 <script>
-  document.querySelector('.js-NotoSansKR-Regular').addEventListener('click', function () {
+  document.querySelector('.js-NotoSerifCJKkr-Normal').addEventListener('click', function () {
   	var label = this.innerHTML;
   	var that = this;
   	this.innerHTML = 'Loading...';
     mytoryWebfont({
-      woffPath: ['/fonts/NotoSansKR-Regular.woff.css'],
-      woff2Path: ['/fonts/NotoSansKR-Regular.woff2.css'],
-      renderingType: 'onReady' // onReady, onNextPage
-    }, function () {
-      var bodyEl = document.querySelector("body");
-      bodyEl.style.fontFamily = 'NotoSansKRWeb';
-      bodyEl.style.fontWeight = 'Regular';
-      that.innerHTML = label;
-    });
-  });
-</script>
-
-<script>
-  document.querySelector('.js-NotoSerifCJKkr-Regular').addEventListener('click', function () {
-  	var label = this.innerHTML;
-  	var that = this;
-  	this.innerHTML = 'Loading...';
-    mytoryWebfont({
-      woffPath: ['/fonts/NotoSerifCJKkr-Regular.woff.css'],
-      woff2Path: ['/fonts/NotoSerifCJKkr-Regular.woff2.css'],
+      woffPath: ['/fonts/NotoSerifCJKkr-Normal.woff.css'],
+      woff2Path: ['/fonts/NotoSerifCJKkr-Normal.woff2.css'],
       renderingType: 'onReady' // onReady, onNextPage
     }, function () {
       var bodyEl = document.querySelector("body");
       bodyEl.style.fontFamily = 'NotoSerifCJKkrWeb';
-      bodyEl.style.fontWeight = 'Regular';
+      bodyEl.style.fontWeight = 'Normal';
       that.innerHTML = label;
     });
   });
