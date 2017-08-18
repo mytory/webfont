@@ -18,7 +18,7 @@ function get_font_info($filename) {
 }
 
 $button_template = <<<button
-<button type="button" class="js-{{font_name}}-{{font_weight}}">{{font_name}}-{{font_weight}}</button>
+<button type="button" class="js-{{font_name}}-{{font_weight}}">{{font_label}}</button>
 
 button;
 
@@ -52,7 +52,22 @@ while($filename = readdir($handle)) {
 	}
 
 	list($font_name, $font_weight) = get_font_info($filename);
-	$buttons .= str_replace(['{{font_name}}', '{{font_weight}}'], [$font_name, $font_weight], $button_template);
+
+	// get human font name from ttf file.
+	$font_label = "$font_name $font_weight";	
+
+    $ttf_filename = str_replace('woff', 'ttf', $filename);
+    if (is_file("fonts/$ttf_filename")) {
+    	$output = [];
+	    exec("exiftool fonts/$ttf_filename -json", $output, $return_var);
+		$info = json_decode(implode("\n", $output), true);
+		if ($info) {
+			$font_label = (!empty($info[0]["FontName-ko"])) ? $info[0]["FontName-ko"] : $info[0]["FontName-en-US"];
+		}
+    }
+
+    // make strings.
+	$buttons .= str_replace(['{{font_name}}', '{{font_weight}}', '{{font_label}}'], [$font_name, $font_weight, $font_label], $button_template);
 	$scripts .= str_replace(['{{font_name}}', '{{font_weight}}'], [$font_name, $font_weight], $script_template);
 }
 

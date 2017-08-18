@@ -18,32 +18,32 @@ title: Mytory Webfont
 
 <div class="examples">
 <!-- buttons start -->
-<button type="button" class="js-NanumBarunGothic-Light">NanumBarunGothic-Light</button>
-<button type="button" class="js-NotoSansCJKkr-Light">NotoSansCJKkr-Light</button>
-<button type="button" class="js-NanumBarunGothic-UltraLight">NanumBarunGothic-UltraLight</button>
-<button type="button" class="js-NanumGothic-Light">NanumGothic-Light</button>
-<button type="button" class="js-NotoSansCJKkr-Regular">NotoSansCJKkr-Regular</button>
-<button type="button" class="js-NanumBarunGothic-Bold">NanumBarunGothic-Bold</button>
-<button type="button" class="js-NotoSansKR-Regular">NotoSansKR-Regular</button>
-<button type="button" class="js-NanumSquare-Bold">NanumSquare-Bold</button>
-<button type="button" class="js-NanumBarunpen-Regular">NanumBarunpen-Regular</button>
-<button type="button" class="js-NanumSquare-Light">NanumSquare-Light</button>
-<button type="button" class="js-NanumBarunGothic-Regular">NanumBarunGothic-Regular</button>
-<button type="button" class="js-NanumGothic_Coding-Regular">NanumGothic_Coding-Regular</button>
-<button type="button" class="js-NanumMyeongjo-ExtraBold">NanumMyeongjo-ExtraBold</button>
-<button type="button" class="js-NotoSerifCJKkr-Regular">NotoSerifCJKkr-Regular</button>
-<button type="button" class="js-NanumGothic_Coding-Bold">NanumGothic_Coding-Bold</button>
-<button type="button" class="js-NanumMyeongjo-Bold">NanumMyeongjo-Bold</button>
-<button type="button" class="js-NanumBrush-Regular">NanumBrush-Regular</button>
-<button type="button" class="js-NanumBarunpen-Bold">NanumBarunpen-Bold</button>
-<button type="button" class="js-NanumSquare-Regular">NanumSquare-Regular</button>
-<button type="button" class="js-NanumSquare-ExtraBold">NanumSquare-ExtraBold</button>
-<button type="button" class="js-IropkeBatang-Regular">IropkeBatang-Regular</button>
-<button type="button" class="js-NanumGothic-ExtraBold">NanumGothic-ExtraBold</button>
-<button type="button" class="js-NanumMyeongjo-Regular">NanumMyeongjo-Regular</button>
-<button type="button" class="js-NanumGothic-Regular">NanumGothic-Regular</button>
-<button type="button" class="js-NanumPen-Regular">NanumPen-Regular</button>
-<button type="button" class="js-NanumGothic-Bold">NanumGothic-Bold</button>
+<button type="button" class="js-NanumBarunGothic-Light">나눔바른고딕 Light</button>
+<button type="button" class="js-NotoSansCJKkr-Light">Noto Sans CJK KR Light</button>
+<button type="button" class="js-NanumBarunGothic-UltraLight">나눔바른고딕 UltraLight</button>
+<button type="button" class="js-NanumGothic-Light">나눔고딕 Light</button>
+<button type="button" class="js-NotoSansCJKkr-Regular">Noto Sans CJK KR Regular</button>
+<button type="button" class="js-NanumBarunGothic-Bold">나눔바른고딕 Bold</button>
+<button type="button" class="js-NotoSansKR-Regular">NotoSansKR Regular</button>
+<button type="button" class="js-NanumSquare-Bold">나눔스퀘어 Bold</button>
+<button type="button" class="js-NanumBarunpen-Regular">나눔바른펜</button>
+<button type="button" class="js-NanumSquare-Light">나눔스퀘어 Light</button>
+<button type="button" class="js-NanumBarunGothic-Regular">나눔바른고딕</button>
+<button type="button" class="js-NanumGothic_Coding-Regular">나눔고딕코딩</button>
+<button type="button" class="js-NanumMyeongjo-ExtraBold">나눔명조 ExtraBold</button>
+<button type="button" class="js-NotoSerifCJKkr-Regular">Noto Serif CJK KR</button>
+<button type="button" class="js-NanumGothic_Coding-Bold">나눔고딕코딩-Bold</button>
+<button type="button" class="js-NanumMyeongjo-Bold">나눔명조 Bold</button>
+<button type="button" class="js-NanumBrush-Regular">나눔손글씨 붓</button>
+<button type="button" class="js-NanumBarunpen-Bold">나눔바른펜 Bold</button>
+<button type="button" class="js-NanumSquare-Regular">나눔스퀘어 Regular</button>
+<button type="button" class="js-NanumSquare-ExtraBold">나눔스퀘어 ExtraBold</button>
+<button type="button" class="js-IropkeBatang-Regular">IropkeBatangMSubset.ttf</button>
+<button type="button" class="js-NanumGothic-ExtraBold">나눔고딕 ExtraBold</button>
+<button type="button" class="js-NanumMyeongjo-Regular">나눔명조</button>
+<button type="button" class="js-NanumGothic-Regular">나눔고딕</button>
+<button type="button" class="js-NanumPen-Regular">나눔손글씨 펜</button>
+<button type="button" class="js-NanumGothic-Bold">나눔고딕 Bold</button>
 
 <!-- buttons end -->
 </div>
