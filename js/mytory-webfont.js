@@ -17,6 +17,8 @@ function mytoryWebfont(options, callback) {
         options.renderingType = 'onReady';
     }
 
+    // todo support ttf and eot
+
     // 스매싱 매거진의 '지연된 웹폰트 불러오기' javascript를 안형우가 수정한 것.
     // https://gist.github.com/hdragomir/8f00ce2581795fd7b1b7
 
