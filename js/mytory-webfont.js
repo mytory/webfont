@@ -17,8 +17,6 @@ function mytoryWebfont(options, callback) {
         options.renderingType = 'onReady';
     }
 
-    // todo support ttf and eot
-
     // 스매싱 매거진의 '지연된 웹폰트 불러오기' javascript를 안형우가 수정한 것.
     // https://gist.github.com/hdragomir/8f00ce2581795fd7b1b7
 
@@ -38,9 +36,25 @@ function mytoryWebfont(options, callback) {
         }
     }
 
+    // all version of ie detect
+    function isIE() {
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf('MSIE ');
+        var trident = ua.indexOf('Trident/');
+        var edge = ua.indexOf('Edge/');
+        if (msie > 0 || trident > 0 || edge > 0) {
+            return true
+        }
+        return false;
+    }
+
+    if (options.disableOnIE === true && isIE()) {
+        return false;
+    }
+
     // localStorage 에 글꼴이 저장돼 있거나, 네이티브 브라우저 캐시를 이용해 저장했다면...
     if (
-        (window.localStorage && localStorage.fontCache)
+        (window.localStorage && (localStorage[woffPath] || localStorage[woff2Path]))
         || document.cookie.indexOf('fontCache') > -1
     ) {
         // 캐시된 버전을 사용한다.
@@ -63,11 +77,7 @@ function mytoryWebfont(options, callback) {
      * @returns {Storage|string|*|boolean}
      */
     function isFileCached(href) {
-        return (
-            window.localStorage
-            && localStorage.fontCache
-            && (localStorage.fontCacheFile === href)
-        );
+        return (window.localStorage && localStorage[href]);
     }
 
     /**
@@ -94,7 +104,7 @@ function mytoryWebfont(options, callback) {
 
         if (isFileCached(fontPath)) {
             // 로컬 스토리지에 캐시한 버전이 있다면 그걸 <head>에 박는다.
-            injectRawStyle(localStorage.fontCache);
+            injectRawStyle(localStorage[fontPath]);
         } else {
             // 아니면, ajax 로 불러온다.
             // jQuery 만 쓴 분들은 생소하겠지만, 이게 plain js로 구현한 ajax 다.
@@ -110,8 +120,7 @@ function mytoryWebfont(options, callback) {
                     }
                     // 그리고 css 내용을 로컬 스토리지에 집어 넣어 나중에도 쓸 수 있게 한다.
                     // 기존에 저장된 것이 있다면 덮어쓴다는 점을 알아 둬라.
-                    localStorage.fontCache = xhr.responseText;
-                    localStorage.fontCacheFile = fontPath;
+                    localStorage[fontPath] = xhr.responseText;
                 }
             };
             xhr.send();
