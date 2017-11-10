@@ -52,6 +52,13 @@ function mytoryWebfont(options, callback) {
         return false;
     }
 
+    if (options.disableOnWinFF === true) {
+        // 윈도우 파폭은 글꼴 렌더링이 영 별로다.
+        if (navigator.userAgent.indexOf("Firefox/") > 0 && navigator.userAgent.indexOf("Windows") > 0) {
+            return false;
+        }
+    }
+
     // localStorage 에 글꼴이 저장돼 있거나, 네이티브 브라우저 캐시를 이용해 저장했다면...
     if (
         (window.localStorage && (localStorage[woffPath] || localStorage[woff2Path]))
